@@ -3,110 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Menu</title>
+    <title>WellThy</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    text-align: center;
-}
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8f1;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b22222;
+            padding: 15px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo {
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #ffcc00;
+        }
+        .hero {
+            text-align: left;
+            padding: 80px 20px;
+            background: url(https://t3.ftcdn.net/jpg/07/66/96/64/360_F_766966459_hycj4Dqz4tZPKQVc4zLioYbd024TRi5C.jpg);
+            color: white;
+ background-repeat : no-repeat;
+                    background-size:100% 100%; 
+ background-attachment:fixed;
 
-header {
-    background-color: #ff5722;
-    color: white;
-    padding: 20px;
-}
 
-.menu {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
+        }
+        .hero h1 {
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+padding-left:50px;
+        }
+        .hero p {
+            font-size: 20px;
+padding-left:50px;
 
-.food-item {
-    background: white;
-    border-radius: 10px;
-    margin: 15px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
+        }
+        .menu-section {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .menu-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #b22222;
+        }
+        .menu-items {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .menu-item {
+            width: 250px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .menu-item:hover {
+            transform: translateY(-10px);
+        }
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .menu-item h3 {
+            margin: 10px 0;
+            color: #b22222;
+        }
+        .menu-item p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #b22222;
+            color: white;
+            margin-top: 40px;
+            font-size: 16px;
+        }
+.contact-section {
+            text-align: center;
+           padding:100px 30px;
+font-size:20px;
+            background-color: #ffe5b4;
+ border-radius: 30px;
 
-.food-item img {
-    width: 100%;
-    border-radius: 10px;
-}
+        }
+        .contact-section h2 {
+            margin-bottom: 10px;
+        }
+ .section {
+            text-align: center;
+            padding:100px 30px;
 
-h2 {
-    color: #333;
-}
 
-.nutrition {
-    background-color: #f3f3f3;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
+        }
+        .about-section {
+ text-align: center;
+margin-bottom: 10px;
+            background-color:  #ffe5b4;
+ border-radius: 30px;
+font-size:20px;
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
+        }
+.about-section h2 {
+ text-align: center;
+margin-bottom: 10px;
+                   }
+
+
+img{
+width:200px;
+height:170px;
 }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Delicious Bites</h1>
-        <p>Your Favorite Food, Fresh & Healthy</p>
-    </header>
-
-    <section class="menu">
-        <div class="food-item">
-            <img src="https://th.bing.com/th?id=OIP.WDZIWyYhBONdPWmkoF07NQHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Burger">
-            <h2>Cheese Burger</h2>
-            <p>Juicy grilled beef patty with fresh lettuce, tomato, and melted cheese.</p>
-            <div class="nutrition">
-                <p><strong>Calories:</strong> 500 kcal</p>
-                <p><strong>Protein:</strong> 25g</p>
-                <p><strong>Carbs:</strong> 40g</p>
-                <p><strong>Fat:</strong> 30g</p>
+    <nav class="navbar">
+        <div class="logo">WellThy</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to WellThy</h1>
+        <p>Enjoy tasty food with health in every bite!<br>Fresh,delicious meal to reach your optimum health and fitness.</p>
+    </div>
+    <div class="menu-section">
+        <h2>Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src=https://www.shutterstock.com/image-photo/beef-burger-on-wooden-board-600nw-1891463155.jpg alt="Burger">
+                <h3>Juicy Burger</h3>
+                <p>50₹</p>
+            </div>
+            <div class="menu-item">
+                <img src=https://static.vecteezy.com/system/resources/thumbnails/035/455/373/small/ai-generated-a-pizza-being-sliced-with-a-sharp-cutter-emphasizing-the-crispy-texture-of-the-crust-free-photo.jpg alt="Pizza">
+                <h3>Cheesy Pizza</h3>
+                <p>140₹</p>
+            </div>
+            <div class="menu-item">
+                <img src=https://media.istockphoto.com/id/155433174/photo/bolognese-pens.jpg?s=612x612&w=0&k=20&c=A_TBqOAzcOkKbeVv8qSDs0bukfAedhkA458JEFolo_M= alt="Pasta">
+                <h3>Delicious Pasta</h3>
+                <p>100₹</p>
+            </div>
+            <div class="menu-item">
+                <img src=https://png.pngtree.com/thumb_back/fh260/background/20230611/pngtree-salad-with-vegetables-in-a-black-bowl-image_2962609.jpg alt="Salad">
+                <h3>Fresh Salad</h3>
+                <p>120₹</p>
+            </div>
+            <div class="menu-item">
+                <img src=https://www.shoreexcursions.asia/wp-content/uploads/2018/08/The-Original-of-Sushi.jpg alt="Sushi">
+                <h3>Exotic Sushi</h3>
+                <p>1000₹</p>
+            </div>
+            <div class="menu-item">
+                <img src=https://png.pngtree.com/background/20230516/original/pngtree-steak-is-sitting-on-a-tray-with-salad-and-vegetables-picture-image_2604488.jpg alt="Steak">
+                <h3>Grilled Steak</h3>
+                <p>500₹</p>
+            </div>
+            <div class="menu-item">
+                <img src=https://media.istockphoto.com/id/544716244/photo/warm-chocolate-lava-cake-with-molten-center-and-red-currants.jpg?s=612x612&w=0&k=20&c=i1rRa1x7D1pu-INKabmC21BaU9MC8ZRQdcC7dBLdzUo= alt="Dessert">
+                <h3>Chocolate Lava Cake</h3>
+                <p>130₹</p>
+            </div>
+            <div class="menu-item">
+                <img src=https://media.istockphoto.com/id/505168330/photo/cup-of-cafe-latte-with-coffee-beans-and-cinnamon-sticks.jpg?s=612x612&w=0&k=20&c=h7v8kAfWOpRapv6hrDwmmB54DqrGQWxlhP_mTeqTQPA= alt="Coffee">
+                <h3>Hot Coffee</h3>
+                <p>70₹</p>
             </div>
         </div>
+    </div>
+<div id="about" class="section about-section">
+        <h2>About Us</h2>
+        <p>WellThy is a family-owned restaurant that has been serving mouth-watering dishes for over a decade.<br> 
+           Our chefs use only the freshest ingredients to create a dining experience like no other.</p>
+    </div><br><br>
+<div id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: info@wellthy07.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Food Street, Tasty Town</p>
+    </div>
 
-        <div class="food-item">
-            <img src="https://theawesomedaily.com/wp-content/uploads/2016/09/pictures-of-pizza-23-1.jpg" alt="Pizza">
-            <h2>Margherita Pizza</h2>
-            <p>Classic Italian pizza with fresh tomatoes, mozzarella, and basil.</p>
-            <div class="nutrition">
-                <p><strong>Calories:</strong> 600 kcal</p>
-                <p><strong>Protein:</strong> 20g</p>
-                <p><strong>Carbs:</strong> 50g</p>
-                <p><strong>Fat:</strong> 25g</p>
-            </div>
-        </div>
 
-        <div class="food-item">
-            <img src="https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?cs=srgb&dl=appetizer-cucumber-cuisine-1059905.jpg&fm=jpg" alt="Salad">
-            <h2>Greek Salad</h2>
-            <p>Fresh lettuce, tomatoes, cucumbers, olives, and feta cheese.</p>
-            <div class="nutrition">
-                <p><strong>Calories:</strong> 200 kcal</p>
-                <p><strong>Protein:</strong> 8g</p>
-                <p><strong>Carbs:</strong> 15g</p>
-                <p><strong>Fat:</strong> 10g</p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Delicious Bites. All Rights Reserved.</p>
+    <footer class="footer">
+        &copy; 2025 Tasty Bites. All rights reserved.
     </footer>
-
 </body>
 </html>
